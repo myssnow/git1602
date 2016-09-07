@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		 <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #startdiv{
+            width: 320px;
+            height: 568px;
+            background: url(img/开始背景.png) no-repeat;
+        }
+        #content{
+            width: 320px;
+            height: 568px;
+            position: absolute;
+            top: 0px;
+            left: 500px;
+        }
+        #btstart{
+        	
+            width: 150px;
+            height: 30px;
+            background: burlywood;
+            border-radius: 30px;
+            position: absolute;
+            top:450px;
+            left:80px;
+        }
+        #maindiv{
+            width: 320px;
+            height:568px;
+            background: url(img/background_1.png);
+            position:absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            overflow: hidden;
+        }
+        #jifen{
+            position: absolute;
+            width: 200px;
+            height: 50px;
+            top: 0;
+            left: 0;
+        }
+          #enddiv{
+            width: 200px;
+            height:200px;
+            position: absolute;
+            top: 300px;
+            left: 60px;
+            display: none;
+        }
+           #btrestart{
+            width: 150px;
+            height: 30px;
+            background: burlywood;
+            border-radius: 30px;
+            z-index: 10000;
+        }
+    </style>
+	</head>
+	<body>
+		<div id="content">
+			<div id="startdiv">
+				<input type="button" id="btstart" value="开始游戏" />
+			</div>
+			<div id="maindiv">
+				
+			</div>
+			  <div id="jifen">
+      			  积分：<span id="jifen1">0</span>
+   			 </div>
+   			 <div id="enddiv">
+    			    游戏结束;积分<span id="jifen2">0</span>
+       		 <div>
+            <input id="btrestart" type="button" value="重新开始"/>
+        </div>
+    </div>
+		</div>
+		<script type="text/javascript">
+			var oDivEnd=document.getElementById("enddiv");
+			var oBtStart=document.getElementById("btstart");
+			var oMainDiv=document.getElementById("maindiv");
+			var oStartDiv=document.getElementById("startdiv");
+			var oContent=document.getElementById("content");
+			var jiFen1=document.getElementById("jifen1");
+			var jiFen2=document.getElementById("jifen2");
+			var reStart=document.getElementById("btrestart");
+			var arrBullet=[];
+			var arrEnemy=[];
+			var isTrue=false;
+			var jiFenSum=0;
+			var backgroundPositionY=0;
+			var config={
+				backConfigLeft : 500,
+				backConfigHeight: 568,
+				backConfigWidth : 320,
+				myPlanWidth:66,
+				myPlanHeight:80,
+				bulletWidth:6,
+				bulletHeight:14,
+				enemy1W:34,
+				enemy1H:24,
+				enemy3W:110,
+				enemy3H:164,
+				enemy2W:46,
+				enemy2H:60
+			}
+			var myPlan;
+			var timer;
+			var count={
+				bullet:0,
+				enemy:0
+			}
+			var speed={
+				bulletSpeed:20,
+				enemySpeed:5
+			}
+			
+			
+				oBtStart.onclick=function(){
+				start();
+			}
+			function start(){
+				oMainDiv.style.display="block";
+				oStartDiv.style.display="none";
+				myPlan=createMyPlan();
+				myPlanMove();
+				myPlan.onclick=function(){
+				isTrue=!isTrue;
+				}
+				clearInterval(timer);
+				timer=setInterval(function(){
+					if(isTrue) return;
+					backgroundPositionY+=1;
+					oMainDiv.style.backgroundPositionY=backgroundPositionY+"px"
+					count.bullet++;
+					count.enemy++;
+					if(count.bullet==5){
+						createBullet();
+						count.bullet=0;
+					}
+					BulletMove();
+					if(count.enemy%80==0){
+						createEmeny("img/enemy3_fly_1.png","img/中飞机爆炸.gif",config.enemy2W,config.enemy2H,2,30,200);
+					}
+					if(count.enemy%20==0){
+					createEmeny("img/enemy1_fly_1.png","img/小飞机爆炸.gif",config.enemy1W,config.enemy1H,1,20,100);
+					}
+					if(count.enemy%200==0){
+						createEmeny("img/enemy2_fly_1.png","img/大飞机爆炸.gif",config.enemy3W,config.enemy3H,5,40,500);
+						count.enemy=0;
+					}
+					EmenyMove();
+					boom();
+					jiFen1.innerHTML=jiFenSum;
+				},30)
+				
+				}
+			
+			
+			
+			function createMyPlan(){
+				var myPlan=document.createElement("img");
+				myPlan.style.width=config.myPlanWidth+"px";
+				myPlan.style.height=config.myPlanHeight+"px";
+				myPlan.style.position="absolute";
+				myPlan.src="img/我的飞机.gif";
+				myPlan.boomSrc="img/本方飞机爆炸.gif";
+				myPlan.style.left=(config.backConfigWidth-config.myPlanWidth)/2+"px"
+				myPlan.style.top=config.backConfigHeight-config.myPlanHeight+"px";
+				
+				oMainDiv.appendChild(myPlan);
+				return myPlan;
+			}
+			function myPlanMove(){
+					oMainDiv.onmousemove=function(e){
+					e=e||window.e;
+					if(isTrue) return;
+					var myleft=e.clientX-config.myPlanWidth/2-config.backConfigLeft;
+					var myTop=e.clientY-config.myPlanHeight/2;
+					
+					if(myleft<=-config.myPlanWidth/2){
+						myleft=-config.myPlanWidth/2;
+					}else if(myleft>config.backConfigWidth-config.myPlanWidth/2){
+						myleft=config.backConfigWidth-config.myPlanWidth/2;
+					} 
+					if(myTop<=0){
+						myTop=0;
+					}else if(myTop>=config.backConfigHeight-config.myPlanHeight){
+						myTop=config.backConfigHeight-config.myPlanHeight;
+					}
+					myPlan.style.left=myleft+"px";
+					myPlan.style.top=myTop+"px";
+				}
+			}
+			function createBullet(){
+				var Bullet=document.createElement("img");
+				Bullet.src="img/bullet1.png";
+				Bullet.style.width=config.bulletWidth+"px";
+				Bullet.style.height=config.bulletHeight+"px";
+				Bullet.style.position="absolute";
+				Bullet.style.left=myPlan.offsetLeft+(config.myPlanWidth-config.bulletWidth)/2+"px";
+				Bullet.style.top=myPlan.offsetTop-config.bulletHeight+"px";
+				arrBullet.push(Bullet);
+				oMainDiv.appendChild(Bullet);
+			}
+			function BulletMove(){
+				for (var i=0;i<arrBullet.length;i++) {
+					arrBullet[i].style.top=arrBullet[i].offsetTop-speed.bulletSpeed+"px";
+					if(arrBullet[i].offsetTop<-config.bulletHeight){
+						oMainDiv.removeChild(arrBullet[i]);
+						arrBullet.splice(i,1);
+						i--;
+					}
+				}
+			}
+			function createEmeny(imgsrc,boomimg,emenyW,emenyH,hp,boomcount,jifen){
+				var Emeny=document.createElement("img");
+				Emeny.src=imgsrc;
+				Emeny.boomSrc=boomimg;
+				Emeny.style.position="absolute";
+				Emeny.style.width=emenyW+"px";
+				Emeny.style.height=emenyH+"px";
+				Emeny.style.top=-emenyH+"px";
+				
+				Emeny.style.left=Random(config.backConfigWidth-emenyW)+"px";
+				Emeny.Hp=hp;
+				Emeny.isBoom=false;
+				Emeny.boomCount=boomcount;
+				Emeny.jiFen=jifen;
+				arrEnemy.push(Emeny);
+				oMainDiv.appendChild(Emeny);
+			}
+			function EmenyMove(){
+				for (var i=0;i<arrEnemy.length;i++) {
+					if(!arrEnemy[i].isBoom){
+					arrEnemy[i].style.top=arrEnemy[i].offsetTop+speed.enemySpeed+"px";
+					if(arrEnemy[i].offsetTop>config.backConfigHeight+config.enemy1H){
+						oMainDiv.removeChild(arrEnemy[i]);
+						arrEnemy.splice(i,1);
+						i--;
+						
+						}
+					}else{
+					if(arrEnemy[i].boomCount==0){
+						if(arrEnemy[i].jiFen==500){
+							
+						}
+							oMainDiv.removeChild(arrEnemy[i]);
+							arrEnemy.splice(i,1);
+							i--;
+							
+						}else{
+							arrEnemy[i].boomCount--;
+						}
+					}
+				}
+			}
+			function boom(){
+				for (var i=0;i<arrEnemy.length;i++) {
+					if(arrEnemy[i].isBoom) continue;
+					for (var j=0;j<arrBullet.length;j++) {
+						if(arrEnemy[i].offsetTop+arrEnemy[i].offsetHeight>arrBullet[j].offsetTop){
+							if(arrEnemy[i].offsetTop<arrBullet[j].offsetTop+arrBullet[j].offsetHeight){
+								if(arrEnemy[i].offsetLeft<arrBullet[j].offsetLeft+arrBullet[j].offsetWidth){
+									if(arrEnemy[i].offsetLeft+arrEnemy[i].offsetWidth>arrBullet[j].offsetLeft){
+										oMainDiv.removeChild(arrBullet[j]);
+										arrBullet.splice(j,1);
+										j--;
+										arrEnemy[i].Hp--;
+										if(arrEnemy[i].Hp==0){
+											arrEnemy[i].src=arrEnemy[i].boomSrc;
+											arrEnemy[i].isBoom=true;
+											jiFenSum+=arrEnemy[i].jiFen;
+										}
+									}
+								}
+							}
+						}
+					}
+			
+				if(myPlan.offsetTop<arrEnemy[i].offsetHeight+arrEnemy[i].offsetTop){
+					if(myPlan.offsetHeight+myPlan.offsetTop>arrEnemy[i].offsetTop){
+						if(myPlan.offsetLeft+myPlan.offsetWidth>arrEnemy[i].offsetLeft){
+							if(myPlan.offsetLeft<arrEnemy[i].offsetLeft+arrEnemy[i].offsetWidth){
+								GameOver();
+							}
+						}
+					}
+				}
+			}
+		}
+			function baowu(){
+				var Baowu=document.createElement("img");
+				Baowu.style.ba
+			}
+			function GameOver(){
+				myPlan.src=myPlan.boomSrc;
+				clearInterval(timer);
+				oDivEnd.style.display="block";
+				oMainDiv.onmousemove=null;
+				jiFen2.innerHTML=jiFenSum;
+			}
+			function Random(max){
+				var zu=Math.floor(Math.random()*max);
+				return zu;
+			}
+			
+			reStart.onclick=function(){
+				oDivEnd.style.display="none";
+				oMainDiv.innerHTML="";
+				backgroundPositionY=0;
+				arrBullet=[];
+			    arrEnemy=[];
+			    jiFenSum=0;
+			    start();
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)http://www.runoob.com/try/try.php?filename=tryjquery_animation1_relative -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>菜鸟教程在线工具</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="./菜鸟教程在线工具_files/bootstrap.min.css" rel="stylesheet">
+<script src="./菜鸟教程在线工具_files/hm.js"></script><script src="./菜鸟教程在线工具_files/codemirror.min.js"></script>
+<link rel="stylesheet" href="./菜鸟教程在线工具_files/codemirror.min.css">
+<script src="./菜鸟教程在线工具_files/htmlmixed.js"></script>
+<script src="./菜鸟教程在线工具_files/css.js"></script>
+<script src="./菜鸟教程在线工具_files/javascript.js"></script>
+<script src="./菜鸟教程在线工具_files/xml.js"></script>
+<script src="./菜鸟教程在线工具_files/closetag.js"></script>
+<script src="./菜鸟教程在线工具_files/closebrackets.js"></script>
+<!--[if lt IE 9]>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+<style>
+ 
+  .CodeMirror {
+    font-size:12px;
+    height:450px;
+  }
+  #textareaCode {
+    height: 450px;
+  }
+  #iframeResult {
+    border: 0!important;
+    min-width: 100px;
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+  }
+  @media screen and (max-width: 768px) {
+    #textareaCode {
+      height: 300px;
+    }
+    .CodeMirror {
+      font-size:12px;
+      height:300px;
+    }
+    #iframeResult {
+     height: 300px;
+    }
+    .form-inline {
+      padding: 6px 0 2px 0;
+    }
+  }
+  .ad {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container" style="width:100%;height:100%; font-size:12px;">
+<!-- 广告位 -->
+  <div class="row" style="min-height:90px">
+   <div class="ad">  <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- demo测试页广告 -->
+<ins class="adsbygoogle" style="display:inline-block;min-width:300px;max-width:970px;width:100%;height:90px" data-ad-client="ca-pub-5751451760833794" data-ad-slot="6979016065"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+  </div>
+
+   <div class="row" style="background-color: #e5eecc;">
+      <div class="panel panel-default" style="margin-bottom:0;">
+   
+  
+      <div class="panel-body" style="background-color: #e5eecc;border-color: #e5eecc;">
+      <form autocomplete="off" role="form">
+   
+                <div class="row">
+                  <div class="col-sm-6">
+                  
+                    <div class="row-fluid">
+                   <label class="inline"><strong style="font-size: 16px;color:#617f10;"> 源代码:</strong></label>
+                   <input id="submitBTN" onclick="submitTryit()" type="button" class="pull-right inline" value="提交运行 »">
+                   <input type="hidden" id="bt" name="bt"> 
+                    <input type="hidden" name="code" id="code">
+                    </div>
+                    <textarea class="form-control" id="textareaCode" name="textareaCode" style="display: none;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"&gt;
+&lt;/script&gt;
+&lt;script&gt; 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      left:'250px',
+      height:'+=150px',
+      width:'+=150px'
+    });
+  });
+});
+&lt;/script&gt; 
+&lt;/head&gt;
+ 
+&lt;body&gt;
+&lt;button&gt;开始动画&lt;/button&gt;
+&lt;p&gt;默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 
+如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!&lt;/p&gt;
+&lt;div style="background:#98bf21;height:100px;width:100px;position:absolute;"&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 208px; left: 82px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 484px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -17px; border-right-width: 13px; min-height: 484px; min-width: 463px; padding-right: 17px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 82px; top: 204px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code"><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-meta">&lt;!DOCTYPE html&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">meta</span> <span class="cm-attribute">charset</span>=<span class="cm-string">"utf-8"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span> <span class="cm-attribute">src</span>=<span class="cm-string">"http://libs.baidu.com/jquery/1.10.2/jquery.min.js"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span> </span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-variable">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">ready</span>(<span class="cm-keyword">function</span>(){</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  <span class="cm-variable">$</span>(<span class="cm-string">"button"</span>).<span class="cm-property">click</span>(<span class="cm-keyword">function</span>(){</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    <span class="cm-variable">$</span>(<span class="cm-string">"div"</span>).<span class="cm-property">animate</span>({</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-property">left</span>:<span class="cm-string">'250px'</span>,</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-property">height</span>:<span class="cm-string">'150px'</span>,</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">      <span class="cm-property">width</span>:<span class="cm-string">'150px'</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">    });</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">  });</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">});</span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">script</span><span class="cm-tag cm-bracket">&gt;</span> </span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">head</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"> </span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span>开始动画<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">button</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span>默认情况下，所有的 HTML 元素有一个静态的位置，且是不可移动的。 </span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;">如果需要改变为，我们需要将元素的 position 属性设置为 relative, fixed, 或 absolute!<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">style</span>=<span class="cm-string">"background:#98bf21;height:100px;width:100px;position:absolute;"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">body</span><span class="cm-tag cm-bracket">&gt;</span></span></pre><pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">html</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; top: 484px;"></div><div class="CodeMirror-gutters" style="display: none; height: 497px;"></div></div></div>
+                    
+
+                  </div>
+                  <div class="col-sm-6">
+                 
+                  <label><strong style="font-size: 16px;color:#617f10;"> 运行结果：</strong></label>
+                   <label class="pull-right"><a href="http://c.runoob.com/" target="_blank" style="font-size: 16px;color:#617f10;text-decoration: underline;"> 菜鸟工具</a></label>
+                  
+                   
+                 <div id="iframewrapper"><iframe frameborder="0" id="iframeResult"></iframe></div>
+                  </div>
+                </div>
+              </form></div>
+             
+             
+            
+      </div>
+    </div>
+
+   </div>
+
+
+<script>
+// Define an extended mixed-mode that understands vbscript and
+// leaves mustache/handlebars embedded templates in html mode
+var mixedMode = {
+name: "htmlmixed",
+scriptTypes: [{matches: /\/x-handlebars-template|\/x-mustache/i,
+               mode: null},
+              {matches: /(text|application)\/(x-)?vb(a|script)/i,
+               mode: "vbscript"}]
+};
+var editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+mode: mixedMode,
+selectionPointer: true,
+lineNumbers: false,
+matchBrackets: true,
+indentUnit: 4,
+indentWithTabs: true
+});
+
+function submitTryit() {
+  var text = editor.getValue();
+  var patternHtml = /<html[^>]*>((.|[\n\r])*)<\/html>/im
+  var patternHead = /<head[^>]*>((.|[\n\r])*)<\/head>/im
+  var array_matches_head = patternHead.exec(text);
+  var patternBody = /<body[^>]*>((.|[\n\r])*)<\/body>/im;
+  
+  var array_matches_body = patternBody.exec(text);
+  var basepath_flag = 1;
+  var basepath = '';
+  if(basepath_flag) {
+    basepath = '<base href="http://www.runoob.com/try/demo_source/" target="_blank">';
+  }
+  if(array_matches_head) {
+    text = text.replace('<head>', '<head>' + basepath );
+  } else if (patternHtml) {
+    text = text.replace('<html>', '<head>' + basepath + '</head>');
+  } else if (array_matches_body) {
+    text = text.replace('<body>', '<body>' + basepath );
+  } else {
+    text = basepath + text;
+  }
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+ 
+  var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+  ifrw.document.open();
+  ifrw.document.write(text);  
+  ifrw.document.close();
+}
+submitTryit();
+</script>
+
+
+
+
+<div style="display:none;">
+<script src="./菜鸟教程在线工具_files/stat.php" language="JavaScript"></script><script src="./菜鸟教程在线工具_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=5578006" target="_blank" title="站长统计">站长统计</a>
+ <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?8e2a116daf0104a78d601f40a45c75b4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+
+</body></html>
