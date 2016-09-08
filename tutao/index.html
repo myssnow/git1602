@@ -5,6 +5,9 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/banner.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 			<div class="topbox">
@@ -22,6 +25,14 @@
 				<div class="leadright">
 					<div class="huiyuan">
 						<div class="hui">会员中心</div><i></i>
+						<ul class="hui-list">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li> 
+						</ul>
 					</div>
 					<div class="touch">
 						<i></i>
@@ -88,7 +99,18 @@
 						<div class="shopping">
 							全部商品分类
 							<span></span>
+							
 						</div>
+						<ul class="banbox-list">
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								
+							</ul>
 					</div>
 					<ul class="shouye">
 						<li><a href="#">首页</a></li>
@@ -97,7 +119,7 @@
 						<li><a href="#">积分兑换</a></li>
 						<li><a href="#">特产资讯</a></li>
 					</ul>
-					<div class="jiezhang">
+					<div class="jiezhang" id="jiezhang">
 						<div class="tiaozhuan">
 							<i></i>
 							<p>去购物车结算</p>
@@ -108,15 +130,46 @@
 							</div>
 						</div>
 						<div class="nav">
-							<i></i>
+							<i id="tu1"></i>
 						</div>
-						
+						<div class="gou" id="gou">
+							
+						</div>
 					</div>
 				</div>
 			</div>
 	<!--==================================================-->
-			<div class="banbox">
-			</div>
+			<div id="focus-banner">
+		<ul id="focus-banner-list">
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="img/20151201euxrsd.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="img/20151201umhbbv.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="img/20151201yimwju.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="img/20151201zbegze.jpg" alt="">
+				</a>
+				
+			</li>
+		</ul>
+		<a href="javascript:;" id="next-img" class="focus-handle"></a>
+		<a href="javascript:;" id="prev-img" class="focus-handle"></a>
+		<ul id="focus-bubble"></ul>
+	</div>
 	<!--=====================================================-->
 	<div class="imbox">
 		<div class="im">
@@ -717,7 +770,45 @@
 		<div class="bottom-mid1">
 			<p>© 2011-2016 土淘网 版权所有，并保留所有权利。ICP备案证书号：豫ICP备16019712号</p>
 		</div>
-		
+		<div class="bottom-mid2">
+			<div class="mid2">
+				
+			
+			<p>网罗天下特产，世界触手可及</p>
+			<a href="#" title="站长统计"></a>
+			<span>服务时间: <i>9:00-18:00</i></span>
+			</div>
+		</div>
+		<div class="hezuo">
+			<ul class="hezuo-list">
+				<li>小伙伴们:</li>
+				<li><a href="#">特产商城</a></li>
+				<li><a href="#">广搜网</a></li>
+				<li><a href="#">海外代购网</a></li>
+				<li><a href="#">我会食特产</a></li>
+				<li><a href="#">蚂蚁农场</a></li>
+			</ul>
+		</div>
+		<div class="anquan">
+			<ul class="anquan-list">
+				<li><a href="#"><img src="img/cert_0_1.png"/></a></li>
+				<li><a href="#"><img src="img/cert_0_1.png"/></a></li>
+				<li><a href="#"><img src="img/cert_0_1.png"/></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="zixun">
+		<div class="zixun1">
+			
+		</div>
+		<div class="zixun2">
+			
+		</div>
+		<div class="zixun3">			
+		</div>
+		<div class="zixun4">
+			
+		</div>
 	</div>
 	</body>
 	

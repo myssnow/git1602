@@ -1,0 +1,18 @@
+.title-box {
+  width: 100%;
+  background: black; }
+
+.title {
+  width: 1195px;
+  height: 60px;
+  margin: 0 auto; }
+  .title a {
+    width: 200px;
+    height: 70px;
+    float: left;
+    margin-left: 65px; }
+    .title a img {
+      width: 200px;
+      height: 70px; }
+
+/*# sourceMappingURL=denglu.css.map */

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图</title>
+	<link rel="stylesheet" href="css/focusStyle.css">
+</head>
+<body>
+	
+
+	<div id="focus-banner">
+		<ul id="focus-banner-list">
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="images/banner2.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="images/banner3.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="images/banner4.jpg" alt="">
+				</a>
+				
+			</li>
+			<li>
+				<a href="#" class="focus-banner-img">
+					<img src="images/banner5.jpg" alt="">
+				</a>
+				
+			</li>
+		</ul>
+		<a href="javascript:;" id="next-img" class="focus-handle"></a>
+		<a href="javascript:;" id="prev-img" class="focus-handle"></a>
+		<ul id="focus-bubble"></ul>
+	</div>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			var focusBanner=function(){
+				var $focusBanner=$("#focus-banner"),
+					$bannerList=$("#focus-banner-list li"),
+					$focusHandle=$(".focus-handle"),
+					$bannerImg=$(".focus-banner-img"),
+					$nextBnt=$("#next-img"),
+					$prevBnt=$("#prev-img"),
+					$focusBubble=$("#focus-bubble"),
+					bannerLength=$bannerList.length,
+					_index=0,
+					_timer="";
+
+					var _height=$(".focus-banner-img").find("img").height();
+					$focusBanner.height(_height);
+					$bannerImg.height(_height);
+
+					$(window).resize(function(){
+						window.location.reload()
+					});
+
+					for(var i=0; i<bannerLength; i++){
+						$bannerList.eq(i).css("zIndex",bannerLength-i);
+						$focusBubble.append("<li></li>");
+					}
+					$focusBubble.find("li").eq(0).addClass("current");
+					var bubbleLength=$focusBubble.find("li").length;
+					$focusBubble.css({
+						"width":bubbleLength*22,
+						"marginLeft":-bubbleLength*11
+					});//初始化
+
+					$focusBubble.on("click","li",function(){
+						$(this).addClass("current").siblings().removeClass("current");
+						_index=$(this).index();
+						changeImg(_index);
+					});//点击轮换
+
+					$nextBnt.on("click",function(){
+						_index++
+						if(_index>bannerLength-1){
+							_index=0;
+						}
+						changeImg(_index);
+					});//下一张
+
+					$prevBnt.on("click",function(){
+						_index--
+						if(_index<0){
+							_index=bannerLength-1;
+						}
+						changeImg(_index);
+					});//上一张
+
+					function changeImg(_index){
+						$bannerList.eq(_index).fadeIn(250);
+						$bannerList.eq(_index).siblings().fadeOut(200);
+						$focusBubble.find("li").removeClass("current");
+						$focusBubble.find("li").eq(_index).addClass("current");
+						clearInterval(_timer);
+						_timer=setInterval(function(){$nextBnt.click()},5000)
+					}//切换主函数
+					_timer=setInterval(function(){$nextBnt.click()},5000)
+			}();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+$width:100%;
+$mwidth:1195px;
+$color:#333333;
+.title-box{
+    width: $width;
+    background: black;
+}
+.title{
+    width: $mwidth;
+    height: 60px;
+    margin: 0 auto;
+    a{
+        width: 200px;
+        height: 70px;
+        float: left;
+        margin-left: 65px;
+        img{
+            width: 200px;
+            height: 70px;
+            
+        }
+    }
+}
