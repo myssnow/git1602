@@ -1,0 +1,128 @@
+			<div class="topbox">
+				<a href="#"><img src="../../../img/1459009548129779534.jpg"/></a>
+			</div>
+			<div class="leadbox">
+				<div class="lead">
+				<div class="leadleft">
+					<a href="#" class="shou">收藏土淘网</a>
+				</div>
+				<div class="leadmid">
+					<a href="denglu.html" class="deng">请登录</a><s>|</s>
+					<a href="zhuce.html" class="zhu">免费注册</a>
+				</div>
+				<div class="leadright">
+					<div class="huiyuan">
+						<div class="hui">会员中心</div><i></i>
+						<ul class="hui-list">
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li>
+							<li><a href="#">我的订单</a></li> 
+						</ul>
+					</div>
+					<div class="touch">
+						<i></i>
+						<a href="#">触屏版</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--===========================================-->
+			<div class="logobox">
+				<div class="logo">
+					<div class="loggo">
+						<a href="#"><img src="../../../img/logo.gif"/></a>
+					</div>
+					<div class="searchbox">
+						<div class="search">
+							<input type="text" id="txt1" class="txt1" value="" />
+							<input type="button" class="btn1" id="btn1" value="搜索" />
+						</div>
+						<ul class="hotsearch">
+							<li>热搜榜：</li>
+							<li><a href="#">芒果</a></li>
+							<li><a href="#">芒果</a></li>
+							<li><a href="#">芒果</a></li>
+							<li><a href="#">芒果</a></li>
+							<li><a href="#">芒果</a></li>
+						</ul>
+					</div>
+					<ul class="logoright">
+						<li>
+							<a href="#">
+								<span></span>
+								<dl>
+									<dt>原产地直采</dt>
+									<dd>100%正品低价</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<dl>
+									<dt>层层质检</dt>
+									<dd>购物有保障</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<dl>
+									<dt>1元也包邮</dt>
+									<dd>闪电发货</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--================================================-->
+			<div class="bannerbox"> 
+				<div class="bannertop">
+					<div class="fenlei">
+						<div class="shopping">
+							全部商品分类
+							<span></span>
+							
+						</div>
+						<ul class="banbox-list">
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								<li><span></span><a href="#">生鲜食品</a></li>
+								
+							</ul>
+					</div>
+					<ul class="shouye">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="#">吃货和他的小伙伴</a></li>
+						<li><a href="#">火拼团</a></li>
+						<li><a href="#">积分兑换</a></li>
+						<li><a href="#">特产资讯</a></li>
+					</ul>
+					<div class="jiezhang" id="jiezhang">
+						<div class="tiaozhuan">
+							<i></i>
+							<p>去购物车结算</p>
+						</div>
+						<div class="count">
+							<div class="count2">
+								0
+							</div>
+						</div>
+						<div class="nav">
+							<i id="tu1"></i>
+						</div>
+						<div class="gou" id="gou">
+							
+						</div>
+					</div>
+				</div>
+			</div>

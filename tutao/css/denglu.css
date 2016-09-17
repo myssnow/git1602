@@ -6,13 +6,141 @@
   width: 1195px;
   height: 60px;
   margin: 0 auto; }
-  .title a {
+
+.a1 {
+  width: 200px;
+  height: 70px;
+  float: left;
+  margin-left: 65px; }
+  .a1 img {
     width: 200px;
-    height: 70px;
+    height: 70px; }
+
+.a2 {
+  width: 72px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  float: left;
+  margin-left: 7px; }
+
+.a2:hover {
+  background: #666666; }
+
+.denglu-box {
+  width: 100%;
+  height: 500px;
+  background: url(../img/loginBg1.jpg); }
+
+.bottom-box {
+  width: 100%;
+  background: #F5F5F5; }
+
+.bottom {
+  width: 100%;
+  height: 90px;
+  background: #09C762; }
+
+.bottom-top {
+  width: 1195px;
+  height: 90px;
+  margin: 0 auto;
+  background: #09C762; }
+  .bottom-top li {
+    width: 210px;
     float: left;
-    margin-left: 65px; }
-    .title a img {
-      width: 200px;
-      height: 70px; }
+    margin-right: 90px; }
+    .bottom-top li a {
+      width: 215px;
+      height: 90px;
+      display: block;
+      background: url(../img/ft-svr1.gif); }
+  .bottom-top li:nth-child(4) {
+    margin: 0; }
+
+.bottom-mid {
+  width: 1195px;
+  height: 14px;
+  margin: 23px auto; }
+
+.bottom-list {
+  width: 658px;
+  height: 12px;
+  margin: 0 auto; }
+  .bottom-list li {
+    float: left;
+    height: 14px;
+    background: url(../img/border-right.png) no-repeat right center; }
+    .bottom-list li a {
+      line-height: 14px;
+      padding: 0 20px;
+      color: #333333; }
+  .bottom-list li:nth-child(7) {
+    background: none; }
+
+.bottom-mid1 {
+  width: 1195px;
+  height: 50px;
+  margin: 0 auto; }
+  .bottom-mid1 p {
+    margin: 38px auto;
+    text-align: center; }
+
+.bottom-mid2 {
+  width: 1195px;
+  height: 26px;
+  margin: 0 auto; }
+
+.mid2 {
+  width: 457px;
+  margin: 0 auto; }
+  .mid2 p {
+    float: left;
+    line-height: 26px;
+    color: #666; }
+  .mid2 a {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 45px;
+    background: url(../img/pic1.gif); }
+  .mid2 span {
+    float: right;
+    color: #666; }
+    .mid2 span i {
+      color: #09C762;
+      font-size: 20px; }
+
+.hezuo {
+  width: 1195px;
+  height: 14px;
+  margin: 20px auto; }
+
+.hezuo-list {
+  width: 400px;
+  margin: 0 auto; }
+  .hezuo-list li {
+    float: left;
+    margin-right: 15px;
+    color: #999; }
+  .hezuo-list a {
+    color: #999; }
+
+.anquan {
+  width: 1195px;
+  height: 63px;
+  margin: 10px auto; }
+
+.anquan-list {
+  width: 335px;
+  height: 40px;
+  margin: 0 auto; }
+  .anquan-list li {
+    float: left; }
+    .anquan-list li a {
+      margin-right: 5px;
+      width: 105px;
+      height: 40px;
+      display: block; }
 
 /*# sourceMappingURL=denglu.css.map */

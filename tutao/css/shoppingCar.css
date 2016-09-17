@@ -1,0 +1,137 @@
+/*-------headnav---------------*/
+body {
+  background: #eee; }
+
+.title-box {
+  width: 100%;
+  background: black; }
+
+.title {
+  width: 1195px;
+  height: 60px;
+  margin: 0 auto; }
+
+.a1 {
+  width: 200px;
+  height: 70px;
+  float: left;
+  margin-left: 65px; }
+  .a1 img {
+    width: 200px;
+    height: 70px; }
+
+.a2 {
+  width: 72px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  float: left;
+  margin-left: 7px; }
+
+.a2:hover {
+  background: #666666; }
+
+.denglu-box {
+  width: 100%;
+  height: 500px;
+  background: url(../img/loginBg1.jpg); }
+
+.carcenter {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .carcenter .carcentbox {
+    width: 1200px;
+    margin: 150px auto;
+    background: white; }
+    .carcenter .carcentbox .carcentop {
+      height: 100px;
+      border-bottom: 1px solid #999;
+      background: url(../img/head.png) no-repeat left center; }
+    .carcenter .carcentbox .carbtbox {
+      height: 80px; }
+      .carcenter .carcentbox .carbtbox p {
+        float: left;
+        width: 110px;
+        height: 30px;
+        margin-top: 30px;
+        background: #333333;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 4px;
+        color: #fff; }
+    .carcenter .carcentbox .goodsbox {
+      background: #fff;
+      width: auto;
+      height: auto;
+      border: 1px solid #e4e4e4; }
+
+thead tr {
+  height: 52px; }
+thead th {
+  text-align: center; }
+thead .th1 {
+  width: 70px; }
+thead .th2 {
+  width: 580px; }
+thead .th3 {
+  width: 101px; }
+thead .th4 {
+  width: 150px; }
+thead .th5 {
+  width: 100px; }
+thead .th6 {
+  width: 80px; }
+
+tbody td {
+  text-align: center; }
+tbody td:hover {
+  cursor: pointer; }
+tbody .proimg {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 10px; }
+tbody .proname {
+  float: left; }
+tbody .pronum i {
+  float: left; }
+tbody .pronum .ifirst {
+  margin-left: 40px; }
+tbody .pronum .cartxt {
+  float: left;
+  margin: 4px 8px 0;
+  width: 15px;
+  height: 15px;
+  text-align: center; }
+
+.jiesuan {
+  width: 1192px;
+  height: 50px;
+  line-height: 50px; }
+  .jiesuan .jieright {
+    width: 115px;
+    float: right; }
+    .jiesuan .jieright .jiemoney {
+      float: left;
+      width: 70px;
+      text-align: center; }
+      .jiesuan .jieright .jiemoney .moneyred {
+        color: #1E9246;
+        font-size: 22px; }
+    .jiesuan .jieright .jiebox {
+      width: 95px;
+      height: 40px;
+      float: left;
+      background: #09C762;
+      text-align: center;
+      color: white;
+      line-height: 40px;
+      border: 1px solid #1E9246;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer; }
+    .jiesuan .jieright .jiebox:hover {
+      background: #1E9246; }
+
+/*# sourceMappingURL=shoppingCar.css.map */

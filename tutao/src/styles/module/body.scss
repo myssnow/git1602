@@ -1,0 +1,223 @@
+.wrapper-box{
+    width: 100%;
+    padding-top: 10px;
+    background: #fafafa;
+}
+.wrapper{
+    width: 1196px;
+    margin: 0 auto;
+}
+.wrapper-top{
+    height: 28px;
+    width: 1196px;
+    a{
+        color: rgb(51,51,51);
+    }
+    a:hover{
+        color: #09C762;
+    }
+}
+.wrapper-main{
+    height: 1242px;
+}
+.main-list{
+    
+    width: 214px;
+   
+    float: left;
+    background: white;
+    h3{
+        
+       border: 1px solid #ddd;
+        a{
+        height: 26px;
+        display: block;
+        padding: 14px 0 12px 12px;
+       
+            p{
+                font-size: 18px;
+                color: #333;
+                float: left;
+                font-weight: 400;
+            }
+            i{
+                margin: 5px 10px 0 0;
+                color: #999;
+                float: right;
+                font-weight: 400;
+            }     
+        }
+    }
+    dl{
+        border: 1px solid #eee;
+        padding: 10px 0;
+        dt{
+            font-size: 14px;
+            color: #888;
+            padding: 5px 0 5px 12px;
+            a{
+                color: #333;
+            }
+        }
+        dd{
+            padding: 7px 0 7px 27px;
+            a{
+                color: #333;
+            }
+        }
+        a:hover{
+            color: #09C762;
+        }
+    }
+}
+.main-maincon{
+    width: 970px;
+    float: right;
+}
+.main-top{
+    border: 1px solid #eee;
+    width: 970px;
+    height: 50px;
+    margin-bottom: 12px;
+    background: white;
+}
+.pinpai{
+    margin-top: 16px;
+    margin-left: 13px;
+    font-size: 14px;
+    li{
+        float: left;
+        a{
+            margin-right: 135px;
+            color: #666;
+            
+        }
+        a:hover{
+            color: #09C762;
+        }
+    }
+    
+}
+.sort{
+    height: 43px;
+    background: white;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #ccc;
+}
+.paixu{
+    float: left;
+}
+.xiao{
+    margin-left: 20px;
+    float: left;
+    line-height: 42px;
+    a{
+        color: rgb(51,51,51);
+        span{
+            float: right;
+            width: 11px;
+            height: 12px;
+            margin: 17px 0 0 8px;
+            background: url(../../../img/search-page-bg.png)no-repeat 0 -112px ;
+        }
+    }
+    a:hover{
+        color: #09C762;
+    }
+}
+.jiag{
+    margin-left: 30px;
+    float: left;
+    line-height: 42px;
+    a{
+        color: rgb(51,51,51);
+        span{
+            float: right;
+            width: 11px;
+            height: 12px;
+            margin: 17px 0 0 8px;
+            background: url(../../../img/search-page-bg.png)no-repeat 0 -137px ;
+        }
+    }
+    a:hover{
+        color: #09C762;
+    }
+}
+.timer{
+    margin-left: 30px;
+    float: left;
+    line-height: 42px;
+    a{
+        color: rgb(51,51,51);
+        span{
+            float: right;
+            width: 11px;
+            height: 12px;
+            margin: 17px 0 0 8px;
+            background: url(../../../img/search-page-bg.png)no-repeat 0 -137px ;
+        }
+    }
+    a:hover{
+        color: #09C762;
+    }
+}
+.tui{
+    width: 970px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.tui-list{
+    width: 990px;
+    li{
+        width: 232px;
+        height: 342px;
+        float: left;
+       background: white;
+        margin:0 14px 14px 0;
+        overflow: hidden;
+        a{
+        
+        display: block;
+            border: none;
+            color: #666;
+            span{
+                display: block;
+            }
+        }
+        a:hover{
+            border: 1px solid #09C762;
+        }
+    }
+}
+.product{
+    width: 230px;
+    height: 230px;
+    img{
+        width: 230px;
+        height: 230px;
+        
+    }
+}
+.nalaprice{
+     font-size: 14px;
+        color: #09C762;
+   width: 175px;
+   padding-left: 55px;
+    b{
+       
+        font-size: 14px;
+        color: #09C762;
+    }
+}
+.productname{
+    height: 35px;
+    line-height: 16px;
+    color: #666;
+}
+.description{
+    height: 16px;
+    color: #999;
+}
+.salerow{
+    color: #999;
+}
