@@ -1,7 +1,15 @@
 $(function(){
-	$.ajax({
+	var page;
+	huoqu(1);
+	$(".fen").on("click","button",function(){
+		page=$(this).html();
+		$("tbody").html("");
+		huoqu(page);
+	})
+	function huoqu(page){
+		$.ajax({
 		type:"get",
-		url:"../../product/GetProductsByPage_get?pagesize=100&pageindex=1&type=0",
+		url:"../../product/GetProductsByPage_get?pagesize=4&pageindex="+page+"&type=1",
 		data:{
 			
 		},	
@@ -16,13 +24,15 @@ $(function(){
 			var oTd1=$("<td class='col-md-2' style='border-color: #C7254E;'></td>");
 			var oTd2=$("<td class='col-md-2' style='border-color: #C7254E;'></td>");
 			var oTd3=$("<td class='col-md-2' style='border-color: #C7254E;'></td>");
-			var oTd4=$("<td class='col-md-1' style='border-color: #C7254E;'></td>");
-			
+			var oTd4=$("<td class='col-md-2' style='border-color: #C7254E;'></td>");
+			var oTd7=$("<td class='col-md-2' style='border-color: #C7254E;'></td>");
 			var oTd5=$("<td class='col-md-1' style='border-color: #C7254E;'></td>");
-			
+			var oTd6=$("<td class='col-md-1' style='border-color: #C7254E;'></td>");
 			oTd1.html(dataStr.name);
-			oTd2.html(dataStr.email);
-			oTd3.html(dataStr.phone);
+			oTd2.html(dataStr.hao);
+			oTd3.html(dataStr.shi);
+			oTd4.html(dataStr.tutao);
+			oTd7.html(dataStr.pic);
 			var oInput1=$("<input />");
 			oInput1.attr("type","button");
 			oInput1.attr("id","delete");
@@ -49,8 +59,8 @@ $(function(){
 		 		dataType:"json"
 		 		});
 			});
-	
-			oTd4.append(oInput1);
+			
+			oTd5.append(oInput1);
 			var oInput2=$("<input />");
 			oInput2.attr("type","button");
 			oInput2.attr("id","add");
@@ -62,15 +72,23 @@ $(function(){
 			});
 			oInput2.on("click",function(){
 		 	
-		 	
+		 	var name=$(this).parent().siblings().eq(0).text();
+ 			var shanghao=$(this).parent().siblings().eq(1).text();
+ 			var shichangjia=$(this).parent().siblings().eq(2).text();
+ 			var tutaojia=$(this).parent().siblings().eq(3).text();
+ 			var pic=$(this).parent().siblings().eq(4).text()
+ 			
+		 	window.location.href="shangpintianjia.html?name="+name+"&hao="+shanghao+"&shi="+shichangjia+"&tutao="+tutaojia+"&pic="+pic;
 		 	
 	 });
-			oTd5.append(oInput2);
+			oTd6.append(oInput2);
 			oTR.append(oTd1);
 			oTR.append(oTd2);
 			oTR.append(oTd3);
 			oTR.append(oTd4);
+			oTR.append(oTd7);
 			oTR.append(oTd5);
+			oTR.append(oTd6);
 			$("tbody").append(oTR);
 //			var str="";
 //			str="<tr><td>"+dataStr.name+"</td>"
@@ -89,7 +107,7 @@ $(function(){
 		
 		
 	});
-	
-	
-	
+	}
 })
+
+	

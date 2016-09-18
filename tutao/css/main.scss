@@ -308,7 +308,6 @@ $color:#333333;
             float: left;
             margin: 10px 0 0 25px;
             background: url(../img/1449088788518670880.png);
-            
         }
         a{
            float: left;
@@ -318,6 +317,28 @@ $color:#333333;
             font-size: 14px;
         }
     }
+    li:nth-child(2) span{
+        background: url(../img/1449088848823694266.png);
+    }
+    li:nth-child(3) span{
+        background: url(../img/1449088901458193225.png);
+    }
+    li:nth-child(4) span{
+        background: url(../img/1449088957941770398.png);
+    }
+    li:nth-child(5) span{
+       background: url(../img/1449089137240745101.png);
+    }
+    li:nth-child(6) span{
+      background: url(../img/1449089235904530709.png);
+    } 
+    li:nth-child(7) span{
+       background: url(../img/1449089297229428349.png);
+    }
+    li:nth-child(8) span{
+       background: url(../img/1449089358084135937.png);
+    }
+        
     li:hover{
         background: white;
     }
@@ -360,8 +381,8 @@ $color:#333333;
     li:nth-child(8):hover .fenlei8{
         display: block;
     }
-}
 
+}
 .fenlei1{
     width: 560px;
     left: 215px;
@@ -717,6 +738,14 @@ $color:#333333;
     height: 35px;
     position: absolute;
     right: 58px;
+     a{
+        width: 170px;
+        height: 35px;
+        position: absolute;
+        left:0;
+        top:0;
+        
+    }
 }
 .gou{
     position: absolute;
@@ -798,6 +827,7 @@ $color:#333333;
     width: 100%;
     height: 300px;
     overflow: hidden;
+    opacity: 0.9;
 }
 
 #focus-banner-list{
@@ -1197,6 +1227,7 @@ $color:#333333;
            }
         }
         dd{
+            width: 305px;
             margin: 10px 0 0 0;
             float: left;
             text-indent: 16px;
@@ -1223,16 +1254,20 @@ $color:#333333;
     margin-top: 37px;
     li{
         float: left;
-        width: 580px;
-        height: 290px;
+        width: 578px;
+        height: 288px;
         margin: 0 33px 33px 0;
         background: white;
+        overflow: hidden;
         a{
-            width: 580px;
+            width: 575px;
             height: 250px;
             display: block;
         }
     }
+//  li:hover{
+//      border: 1px solid #09C762;
+//  }
 }
 .jishi{
     line-height: 40px;
@@ -1329,8 +1364,9 @@ $color:#333333;
                 height: 120px;
                 margin: 0 auto;
                 display: block;
-                
+                opacity:1;
             }
+            
             h3{
                 margin-top: 10px;
                 color: #666;
@@ -1339,8 +1375,11 @@ $color:#333333;
             p{
                 color: #09C762;
                 font-size: 12px;   
-                margin-top: 15px;         
+//              margin-top: 15px;         
             }
+        }
+        li:hover img{
+            opacity:0.8;
         }
     }
 }

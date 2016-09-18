@@ -175,7 +175,102 @@ tbody{
         }
     }
 }
-
+.bottom-box{
+    width: $width;
+    background: #F5F5F5;
+    margin-top: 100px;
+}
+.bottom{
+    width: $width;
+    height: 90px;
+   background: #09C762;
+    
+}
+.bottom-top{
+    width: $mwidth;
+   height: 90px;
+   margin: 0 auto;
+   background: #09C762;
+   li{
+       width: 210px;
+       float: left;
+       margin-right: 90px;
+       a{
+           width: 215px;
+           height: 90px;
+           display: block;
+           background: url(../img/ft-svr1.gif);
+       }
+   }
+   li:nth-child(4){
+       margin: 0;
+   }
+}
+.bottom-mid{
+    width: $mwidth;
+    height: 14px;
+    margin: 23px auto;
+}
+.bottom-list{
+    width: 658px;
+    height: 12px;
+    margin: 0 auto;
+    li{
+        float: left;
+        height: 14px;
+        background: url(../img/border-right.png)no-repeat right center;
+        a{
+            line-height: 14px;
+            padding: 0 20px;
+            color:#333333;
+        }
+    }
+    li:nth-child(7){
+        background: none;
+    }
+}
+.bottom-mid1{
+    width: $mwidth;
+    height: 50px;
+    margin: 0 auto;
+    p{
+        margin: 38px auto;
+        text-align: center;
+    }
+}
+.bottom-mid2{
+    
+    width: $mwidth;
+    height: 26px;
+    margin: 0 auto;
+   
+}
+.mid2{
+    width: 457px;
+    margin: 0 auto;
+    p{
+        float: left;
+        line-height: 26px;
+        color: #666;
+    }
+    a{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-left: 45px;
+        background: url(../img/pic1.gif);
+       
+    }
+    span{
+        float: right;
+        color: #666;
+        i{
+            color: #09C762;
+            font-size: 20px;
+            
+        }
+    }
+}
 
 
 

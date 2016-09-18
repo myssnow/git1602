@@ -1,4 +1,5 @@
 $(function(){
+	
 	$("#sub1").click(function(){
 //		alert(1)
 			var pName=$("#usernamesignup").val();
@@ -61,7 +62,54 @@ $(function(){
 				}
 			},
 			dataType:"json"
-		})
-	})
+		});
+	});
+	
+		$("#usernamesignup").blur(function(){
+			
+			if($("#usernamesignup").val()==""){
+				$("#p1").css("display","block");
+			}else{
+				$("#p1").css("display","none");
+			}
+	});
+	
+		$("#emailsignup").blur(function(){
+			
+			if($("#emailsignup").val()==""){
+				$("#p2").css("display","block");
+			}else{
+				$("#p2").css("display","none");
+			}
+	});
+	
+		$("#passwordsignup").blur(function(){
+			
+			if($("#passwordsignup").val()==""){
+				$("#p3").css("display","block");
+			}else{
+				$("#p3").css("display","none");
+			}
+	});
+	
+		$("#passwordsignup_confirm").blur(function(){
+			
+			if($("#passwordsignup_confirm").val()==""){
+				$("#p4").css("display","block");
+			}else{
+				$("#p4").css("display","none");
+			}
+	});
+	
+		$("#phone").blur(function(){
+			
+			if($("#phone").val()==""){
+				$("#p5").css("display","block");
+			}else{
+				$("#p5").css("display","none");
+			}
+	});
+	
+	
 	
 })

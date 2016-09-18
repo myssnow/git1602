@@ -134,4 +134,84 @@ tbody .pronum .cartxt {
     .jiesuan .jieright .jiebox:hover {
       background: #1E9246; }
 
+.bottom-box {
+  width: 100%;
+  background: #F5F5F5;
+  margin-top: 100px; }
+
+.bottom {
+  width: 100%;
+  height: 90px;
+  background: #09C762; }
+
+.bottom-top {
+  width: 1195px;
+  height: 90px;
+  margin: 0 auto;
+  background: #09C762; }
+  .bottom-top li {
+    width: 210px;
+    float: left;
+    margin-right: 90px; }
+    .bottom-top li a {
+      width: 215px;
+      height: 90px;
+      display: block;
+      background: url(../img/ft-svr1.gif); }
+  .bottom-top li:nth-child(4) {
+    margin: 0; }
+
+.bottom-mid {
+  width: 1195px;
+  height: 14px;
+  margin: 23px auto; }
+
+.bottom-list {
+  width: 658px;
+  height: 12px;
+  margin: 0 auto; }
+  .bottom-list li {
+    float: left;
+    height: 14px;
+    background: url(../img/border-right.png) no-repeat right center; }
+    .bottom-list li a {
+      line-height: 14px;
+      padding: 0 20px;
+      color: #333333; }
+  .bottom-list li:nth-child(7) {
+    background: none; }
+
+.bottom-mid1 {
+  width: 1195px;
+  height: 50px;
+  margin: 0 auto; }
+  .bottom-mid1 p {
+    margin: 38px auto;
+    text-align: center; }
+
+.bottom-mid2 {
+  width: 1195px;
+  height: 26px;
+  margin: 0 auto; }
+
+.mid2 {
+  width: 457px;
+  margin: 0 auto; }
+  .mid2 p {
+    float: left;
+    line-height: 26px;
+    color: #666; }
+  .mid2 a {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-left: 45px;
+    background: url(../img/pic1.gif); }
+  .mid2 span {
+    float: right;
+    color: #666; }
+    .mid2 span i {
+      color: #09C762;
+      font-size: 20px; }
+
 /*# sourceMappingURL=shoppingCar.css.map */

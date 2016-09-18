@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/houtai.css"/>
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.0-dist/dist/css/bootstrap.css"/>
 		<script src="js/houtai.js" type="text/javascript" charset="utf-8"></script>
 		
 	</head>
@@ -16,60 +17,30 @@
 				<div class="back-left">
 					<ul class="user-list">
 						<li>
-							<input type="button" name="btn4" id="btn4" value="用户列表" />
+							<a href="houtai.html" id="btn4" >用户列表</a>
 							
 						</li>
-						<li><input type="button" id="btn5" value="商品列表" /></li>
-						<li><input type="button" id="btn6" value="商品添加" /></li>
+						<li><a href="sahngpinliebiao.html" id="btn4" >商品列表</a></li>
+						<li><a href="shangpintianjia.html" id="btn4" >商品添加</a></li>
 					</ul>
 				</div>
-				<div class="back-right">
-					<table border="1" cellspacing="0" cellpadding="0" id="tab">
+				<div class="back-right con">
+					<table border="1" cellspacing="0" cellpadding="0" id="tab" class="table table-border" style="border-color: #C7254E;">
+						<thead>
 						<tr>
-							<th>用户名</th>
-							<th>邮箱</th>
-							<th>手机号</th>
-							<th>删除</th>
+							<th style="border-color: #C7254E;">用户名</th>
+							<th style="border-color: #C7254E;">邮箱</th>
+							<th style="border-color: #C7254E;">手机号</th>
+							<th style="border-color: #C7254E;">删除</th>
+							<th style="border-color: #C7254E;">修改</th>
+						</tr>
+						</thead>
+						<tbody>
 							
-							<th>修改</th>
-						</tr>
-						
+						</tbody>
 					</table>
-					<table border="1" cellspacing="0" cellpadding="0" id="tab2">
-						<tr>
-							<th>名称</th>
-							<th>商品货号</th>
-							<th>市场价</th>
-							<th>土淘价</th>
-							<th>删除</th>
-							<th>修改</th>
-						</tr>
-						
-					</table>
-					<div class="tianjia-box" id="tianjia-box">
-						<div class="tianjia-ming">
-							<p>名称</p> <input type="text" id="ming" value="" />
-						</div>
-						<div class="tianjia-hao">
-							<p>商品货号</p> <input type="text" id="hao" value="" />
-						</div>
-						<div class="tianjia-shi">
-							<p>市场价</p> <input type="text" id="shi" value="" />
-						</div>
-						<div class="tianjia-tutao">
-							<p>土淘价</p> <input type="text" id="tutao" value="" />
-						</div>
-						<div class="tianjia-pic">
-							<p>图片</p> <input type="text" id="pic" value="" />
-						</div>
-						<div class="tianjia-lei">
-							<p>类型</p> <input type="text" id="lei" value="" />
-						</div>
-						<div class="tianjia">
-							<input type="button" id="tianjia" value="添加" />
-						</div>
-						
-					</div>
+					
+					
 					
 				</div>
 				

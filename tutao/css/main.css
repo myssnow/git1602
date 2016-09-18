@@ -273,6 +273,20 @@
       line-height: 36px;
       margin-left: 20px;
       font-size: 14px; }
+  .banbox-list li:nth-child(2) span {
+    background: url(../img/1449088848823694266.png); }
+  .banbox-list li:nth-child(3) span {
+    background: url(../img/1449088901458193225.png); }
+  .banbox-list li:nth-child(4) span {
+    background: url(../img/1449088957941770398.png); }
+  .banbox-list li:nth-child(5) span {
+    background: url(../img/1449089137240745101.png); }
+  .banbox-list li:nth-child(6) span {
+    background: url(../img/1449089235904530709.png); }
+  .banbox-list li:nth-child(7) span {
+    background: url(../img/1449089297229428349.png); }
+  .banbox-list li:nth-child(8) span {
+    background: url(../img/1449089358084135937.png); }
   .banbox-list li:hover {
     background: white; }
   .banbox-list li:hover a {
@@ -563,6 +577,12 @@
   height: 35px;
   position: absolute;
   right: 58px; }
+  .jiezhang a {
+    width: 170px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    top: 0; }
 
 .gou {
   position: absolute;
@@ -633,7 +653,8 @@
   position: relative;
   width: 100%;
   height: 300px;
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 0.9; }
 
 #focus-banner-list {
   position: relative;
@@ -970,6 +991,7 @@
       color: #FF4400;
       margin: 22px 0 0 20px; }
     .jieshao dl dd {
+      width: 305px;
       margin: 10px 0 0 0;
       float: left;
       text-indent: 16px;
@@ -991,12 +1013,13 @@
   margin-top: 37px; }
   .xianshi-list li {
     float: left;
-    width: 580px;
-    height: 290px;
+    width: 578px;
+    height: 288px;
     margin: 0 33px 33px 0;
-    background: white; }
+    background: white;
+    overflow: hidden; }
     .xianshi-list li a {
-      width: 580px;
+      width: 575px;
       height: 250px;
       display: block; }
 
@@ -1083,15 +1106,17 @@
         width: 120px;
         height: 120px;
         margin: 0 auto;
-        display: block; }
+        display: block;
+        opacity: 1; }
       .sheng-right li .right h3 {
         margin-top: 10px;
         color: #666;
         font-size: 12px; }
       .sheng-right li .right p {
         color: #09C762;
-        font-size: 12px;
-        margin-top: 15px; }
+        font-size: 12px; }
+    .sheng-right li li:hover img {
+      opacity: 0.8; }
 
 .logob {
   width: 200px; }

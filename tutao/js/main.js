@@ -33,5 +33,26 @@ $(document).ready(function(){
 	$("#scoll").click(function(){
 		$("body,html").animate({scrollTop:"0px"},300)
 	})
-	
+	$.ajax({
+		type:"get",
+		url:"../../product/GetProductsByPage_get?pagesize=100&pageindex=1&type=1",
+		data:{
+			
+		},
+		success:function(data){
+			var str="";
+			$.each(data,function(idnex,value){
+			var dataStr=eval("("+value.Data+")");	
+			
+			str+="<li><div class='right'>";
+			str+="<a href='xiangqing.html'>";			
+			str+="<img src='img/"+dataStr.pic+"'/>"	;
+			str+="<h3>"+dataStr.name+"</h3></a>";
+			str+= "<p>￥"+dataStr.tutao+"元</p></div></li>";
+			});
+			$(".right-list").append(str);
+		},
+		dataType:"json",
+		async:true
+	});
 })
